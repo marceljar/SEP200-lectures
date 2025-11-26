@@ -14,8 +14,6 @@ int main() {
 
     std::cout << "The sum is: " << result << std::endl;
 
-    std::cout << "PI is defined as: " << PI << std::endl;
-
     std::cout << "Program finished!" << std::endl;
 
     return 0;

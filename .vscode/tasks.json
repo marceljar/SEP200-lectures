@@ -8,8 +8,8 @@
       "command": "g++",
       "args": [
         "-g",
-        "introduction/main2.cpp",
-        "introduction/math2.cpp",
+        "introduction/main.cpp",
+        "introduction/math.cpp",
         "-o",
         "main.exe"
       ],
