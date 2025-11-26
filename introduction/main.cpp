@@ -1,12 +1,11 @@
-// main.cpp
 #include <iostream>
-#include "header.h"
+#include "math.h"
 
 int main() {
 
     std::cout << "Program started!" << std::endl;
 
-    printMessage();  // Call function defined in header.cpp
+    print_message();  // Call function defined in header.cpp
 
     int x = 5;
     int y = 7;
