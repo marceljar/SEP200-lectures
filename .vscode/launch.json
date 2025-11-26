@@ -2,9 +2,8 @@
 {
   "version": "0.2.0",
   "configurations": [
-
     {
-      "name": "Debug main",
+      "name": "Debug Multiple Files",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/main.exe",   
@@ -16,6 +15,20 @@
       "MIMode": "gdb",                        
       "miDebuggerPath": "gdb",                
       "preLaunchTask": "build-cpp"
+    },
+    {
+      "name": "Debug active C++ file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",          // or "lldb" on macOS
+      "miDebuggerPath": "gdb",  // adjust path if needed
+      "preLaunchTask": "build active file"
     }
   ]
 }

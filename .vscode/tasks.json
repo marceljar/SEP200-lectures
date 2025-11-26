@@ -8,10 +8,26 @@
       "command": "g++",
       "args": [
         "-g",
-        "introduction/main.cpp",
-        "introduction/header.cpp",
+        "introduction/main2.cpp",
+        "introduction/math2.cpp",
         "-o",
         "main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+     {
+      "label": "build active file",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
       ],
       "group": {
         "kind": "build",
