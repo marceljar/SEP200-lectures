@@ -4,8 +4,12 @@ class Student{
 private:
     char email_[16];
     float gpa_;
-    
+
 public:
+    Student(){
+        email_[0] = '\0';
+        gpa_ = 0;
+    }
     void edit() {
         std::cout << "email: " << std::endl;
         std::cin >> email_;
@@ -22,13 +26,11 @@ public:
 int main() {
     
     Student student;
-
+    
+    student.display();
+   
     student.edit();
     student.display();
-
-    // errors
-    // john_doe.gpa_ = 4.0
-    // std::cout << john_doe.gpa_
     
     return 0;
 }
