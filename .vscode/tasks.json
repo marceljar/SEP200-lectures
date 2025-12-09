@@ -34,6 +34,11 @@
         "isDefault": true
       },
       "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "cleanup-executable",
+      "type": "shell",
+      "command": "del /Q \"${fileDirname}/${fileBasenameNoExtension}.exe"
     }
   ]
 }
