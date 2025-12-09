@@ -7,6 +7,7 @@ private:
     int size_;
 
 public:
+    // constructor
     IntArray(int size) : size_(size) {
         data_ = new int[size_];
         for (int i = 0; i < size_; i++){
@@ -14,6 +15,7 @@ public:
         }
         std::cout << "constructor called." << std::endl;
     }
+    // copy constructor
     IntArray(const IntArray& other) : size_(other.size_) {
         data_ = new int[size_];
         for (int i = 0; i < size_; i++) {
@@ -21,11 +23,11 @@ public:
         }
         std::cout << "copy constructor called." << std::endl;
     }
+    // destructor
     ~IntArray() {
         delete[] data_;
         std::cout << "destructor called." << std::endl;
     }
-
     void print() {
         for (int i = 0; i < size_; i++){
             std::cout << data_[i] << " ";

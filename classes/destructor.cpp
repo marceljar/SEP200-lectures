@@ -7,6 +7,7 @@ private:
     float gpa_;
 
 public:
+    // constructor
     Student(){
         email_[0] = '\0';
         gpa_ = 0;
@@ -23,6 +24,7 @@ public:
         email_[sizeof(email_) - 1] = '\0';
         gpa_ = other.gpa_;
     }
+    // destructor
     ~Student(){
         std::cout << "Destructor Called" << std::endl;
     }
@@ -49,20 +51,15 @@ Student copy(Student student){
 
 int main() {
     
-    Student student1, student2("john@email.com", 3.8);
+    Student student("john@email.com", 3.8);
     
-    student1.display();
+    student.display();
    
-    student1.edit();
-    student1.display();
+    Student student2(student); 
+    call_display(student2); 
 
-    student2.display();
-
-    Student student3(student1); // calls copy constructor
-    call_display(student2); // also calls copy constructor
-
-    Student student4;
-    student4 = copy(student3); // also calls copy constructor
+    Student student3;
+    student3 = copy(student2); 
     
     return 0;
 }

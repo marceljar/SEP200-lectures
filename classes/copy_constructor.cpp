@@ -7,6 +7,7 @@ private:
     float gpa_;
 
 public:
+    // constructor
     Student(){
         email_[0] = '\0';
         gpa_ = 0;

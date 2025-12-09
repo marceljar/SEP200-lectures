@@ -6,7 +6,7 @@ private:
     float gpa_;
 
 public:
-    // using a member initalizer list for gpa_
+    // constructor with member initalizer list
     Student() : gpa_(0) {
         email_[0] = '\0';
     }
