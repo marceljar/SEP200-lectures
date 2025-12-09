@@ -2,7 +2,7 @@
 
 class Student{
 private:
-    char email_[16];
+    char email_[32];
     float gpa_;
 
 public:
