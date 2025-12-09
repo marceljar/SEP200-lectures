@@ -8,14 +8,17 @@ private:
 public:
     void edit() {
         std::cout << "email: " << std::endl;
-        std::cin >> email_;
+        std::cin >> this->email_;
         std::cout << "gpa: " << std::endl;
-        std::cin >> gpa_;
+        std::cin >> this->gpa_;
+    }
+    void edit_gpa(float gpa_) {
+        this->gpa_ = gpa_;
     }
     void display(){
         std::cout << "-----------------" << std::endl;
-        std::cout << "Email: " << email_  << std::endl;
-        std::cout << "gpa: " << gpa_ << std::endl;
+        std::cout << "Email: " << this->email_  << std::endl;
+        std::cout << "gpa: " << this->gpa_ << std::endl;
     }
 };
 
@@ -26,9 +29,8 @@ int main() {
     student.edit();
     student.display();
 
-    // errors
-    // john_doe.gpa_ = 4.0
-    // std::cout << john_doe.gpa_
-    
+    student.edit_gpa(4.0);
+    student.display();
+
     return 0;
 }
