@@ -9,9 +9,9 @@ namespace math {
     // declares that PI was defined somewhere else
     extern const double PI;
 
-    int add(int a, int b);   // function prototype
-    double circle_Area(double radius); // function prototype 
-    void print_message();    // function prototype
+    int add(int a, int b);
+    double circle_area(double radius); 
+    void print_message();
 
 }
 

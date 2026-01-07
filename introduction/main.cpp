@@ -1,16 +1,17 @@
 #include <iostream>
 #include "math.h"
 
-int main() {
+int main()
+{
 
     std::cout << "Program started!" << std::endl;
 
-    print_message();  // Call function defined in header.cpp
+    print_message(); //function defined in math.cpp
 
     int x = 5;
     int y = 7;
 
-    int result = add(x, y); // Set a breakpoint here
+    int result = add(x, y); //function defined in math.cpp
 
     std::cout << "The sum is: " << result << std::endl;
 
