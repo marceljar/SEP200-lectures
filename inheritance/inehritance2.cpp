@@ -9,13 +9,7 @@ protected:
 
 public:
     Automobile(const std::string& b, int speed)
-        : brand_(b), maxSpeed_(speed) {
-            std::cout << "Base constructor called" << std::endl;
-        }
-    
-    ~Automobile(){
-        std::cout << "Base destructor called" << std::endl;
-    }
+        : brand_(b), maxSpeed_(speed) {}
 
     void displayInfo() const {
         std::cout << "Brand: " << brand_
@@ -30,13 +24,7 @@ private:
 
 public:
     Car(const std::string& b, int speed, int doors)
-        : Automobile(b, speed), numberOfDoors_(doors) {
-           std::cout << "Derived constructor called" << std::endl;
-        }
-    
-    ~Car(){
-        std::cout << "Derived destructor called" << std::endl;
-    }
+        : Automobile(b, speed), numberOfDoors_(doors) {}
 
     // shadowing the base displayInfo() function
     void displayInfo() const {
