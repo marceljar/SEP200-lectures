@@ -2,21 +2,20 @@
 #include <iostream>
 #include "math2.h"
 
-namespace math {
+// defines PI as a const
+const double math::PI = 3.1416;
 
-    // defines PI as a const
-    const double PI = 3.1416;
+int math::add(int a, int b)
+{
+    return a + b;
+}
 
-    int add(int a, int b) {
-        return a + b;
-    }
+double math::circle_area(double radius)
+{
+    return PI * radius * radius;
+}
 
-    double circle_area(double radius) {
-        return PI * radius * radius;
-    }
-
-    void print_message() {
-        std::cout << "Hello from main.cpp!" << std::endl;
-    }
-
+void math::print_message()
+{
+    std::cout << "Hello from main.cpp!" << std::endl;
 }
