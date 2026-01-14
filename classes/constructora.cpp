@@ -1,36 +1,42 @@
 #include <iostream>
 
-class Student{
+class Student
+{
 private:
     char email_[32];
     float gpa_;
 
 public:
     // constructor with member initalizer list
-    Student() : gpa_(0) {
+    Student() : gpa_(0)
+    {
+        // could not be done in the initialzer list
         email_[0] = '\0';
     }
-    void edit() {
+    void edit()
+    {
         std::cout << "email: " << std::endl;
         std::cin >> email_;
         std::cout << "gpa: " << std::endl;
         std::cin >> gpa_;
     }
-    void display(){
+    void display()
+    {
         std::cout << "-----------------" << std::endl;
-        std::cout << "Email: " << email_  << std::endl;
+        std::cout << "Email: " << email_ << std::endl;
         std::cout << "gpa: " << gpa_ << std::endl;
     }
 };
 
-int main() {
-    
+int main()
+{
+
     Student student;
-    
+
     student.display();
-   
+
     student.edit();
     student.display();
-    
+
     return 0;
 }
