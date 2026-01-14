@@ -1,46 +1,52 @@
 #include <iostream>
 #include <cstring> // for strncpy
 
-class Student{
+class Student
+{
 private:
     char email_[32];
     float gpa_;
 
 public:
     // constructor
-    Student(){
+    Student()
+    {
         email_[0] = '\0';
         gpa_ = 0;
     }
     // overloaded constructor
-    Student(char email[], float gpa) {
+    Student(char email[], float gpa)
+    {
         std::strncpy(email_, email, sizeof(email_) - 1);
         email_[sizeof(email_) - 1] = '\0';
         gpa_ = gpa;
     }
-    void edit() {
+    void edit()
+    {
         std::cout << "email: " << std::endl;
         std::cin >> email_;
         std::cout << "gpa: " << std::endl;
         std::cin >> gpa_;
     }
-    void display(){
+    void display()
+    {
         std::cout << "-----------------" << std::endl;
-        std::cout << "Email: " << email_  << std::endl;
+        std::cout << "Email: " << email_ << std::endl;
         std::cout << "gpa: " << gpa_ << std::endl;
     }
 };
 
-int main() {
-    
+int main()
+{
+
     Student student1, student2("john@email.com", 3.8);
-    
+
     student1.display();
-   
+
     student1.edit();
     student1.display();
 
     student2.display();
-    
+
     return 0;
 }

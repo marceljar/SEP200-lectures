@@ -1,34 +1,37 @@
 #include <iostream>
 
-class Student{
+class Student
+{
 private:
     char email_[32];
     float gpa_;
-    
+
 public:
-    void edit() {
+    void edit()
+    {
         std::cout << "email: " << std::endl;
         std::cin >> email_;
         std::cout << "gpa: " << std::endl;
         std::cin >> gpa_;
     }
-    void display(){
+    void display()
+    {
         std::cout << "-----------------" << std::endl;
-        std::cout << "Email: " << email_  << std::endl;
+        std::cout << "Email: " << email_ << std::endl;
         std::cout << "gpa: " << gpa_ << std::endl;
     }
 };
 
-int main() {
-    
+int main()
+{
     Student student;
 
     student.edit();
     student.display();
 
     // errors
-    // john_doe.gpa_ = 4.0
-    // std::cout << john_doe.gpa_
-    
+    // student.gpa_ = 4.0;
+    // std::cout << student.gpa_;
+
     return 0;
 }
