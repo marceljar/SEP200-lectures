@@ -9,9 +9,9 @@ int main() {
     int units = 3;
     double pricePerUnit = 19.99;
 
-    double total = units * pricePerUnit;   // (units) int -> double
+    double total = units * pricePerUnit;   // int -> double
 
-    printTotal(total); // (total) double-> int
+    printTotal(total); // double-> int
 
     return 0;
 }
