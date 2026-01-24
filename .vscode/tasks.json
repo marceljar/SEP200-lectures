@@ -8,8 +8,8 @@
       "command": "g++",
       "args": [
         "-g",
-        "overloading/vector/main.cpp",
-        "overloading/vector/vector.cpp",
+        "templates/vector/main.cpp",
+        "templates/vector/vector.cpp",
         "-o",
         "main.exe"
       ],
