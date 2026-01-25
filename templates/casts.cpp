@@ -5,6 +5,7 @@ class Base
 {
 public:
     virtual ~Base() {};
+    virtual void greet() const {};
 };
 
 class Derived : public Base
