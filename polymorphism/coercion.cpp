@@ -1,15 +1,17 @@
 #include <iostream>
 
-void printTotal(int total) {
+void printTotal(int total)
+{
     std::cout << "Total: " << total << std::endl;
 }
 
-int main() {
+int main()
+{
 
     int units = 3;
     double pricePerUnit = 19.99;
 
-    double total = units * pricePerUnit;   // int -> double
+    double total = units * pricePerUnit; // int -> double
 
     printTotal(total); // double-> int
 
