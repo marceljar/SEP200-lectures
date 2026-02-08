@@ -64,7 +64,8 @@ int main()
         }
         else
         {
-            std::cout << "Not a Dog, cannot downcast." << std::endl;
+            std::cout << "Not a Dog, cannot downcast."
+                      << std::endl;
         }
 
         if (Cat *asCat = dynamic_cast<Cat *>(pointer))
@@ -73,7 +74,8 @@ int main()
         }
         else
         {
-            std::cout << "Not a Cat, cannot downcast." << std::endl;
+            std::cout << "Not a Cat, cannot downcast."
+                      << std::endl;
         }
     }
 
