@@ -89,7 +89,8 @@ void enroll(Student &student, Course &course)
 
 int main()
 {
-    Student alice("Alice"), bob("Bob"), john("John"), kevin("Kevin");
+    Student alice("Alice"), bob("Bob"),
+        john("John"), kevin("Kevin");
     Course sep200("Object Oriented Programming", "SEP200"),
         sem305("Discrete Mathematics", "SEM305");
 

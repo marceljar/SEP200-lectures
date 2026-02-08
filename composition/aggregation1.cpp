@@ -20,7 +20,8 @@ public:
     }
     void display() const
     {
-        cout << "Name: " << name_ << ", Number: " << number_ << endl;
+        cout << "Name: " << name_
+             << ", Number: " << number_ << endl;
     }
 };
 

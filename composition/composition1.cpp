@@ -13,10 +13,14 @@ public:
     {
         cout << "Constructor for Engine called." << endl;
     }
-    ~Engine() { cout << "Destructor for Engine called." << endl; }
+    ~Engine()
+    {
+        cout << "Destructor for Engine called." << endl;
+    }
     void display()
     {
-        cout << "Engine type: " << type_ << ", HP: " << hp_ << endl;
+        cout << "Engine: " << type_
+             << ", HP: " << hp_ << endl;
     }
 };
 
@@ -28,8 +32,9 @@ class Car
     int doors_;
 
 public:
-    Car(string maker, string model, int doors, int hp, string type)
-        : engine_(hp, type), maker_(maker), model_(model), doors_(doors)
+    Car(string maker, string model, int doors, int hp,
+        string type) : engine_(hp, type), maker_(maker),
+                       model_(model), doors_(doors)
     {
         cout << "Constructor for Car called." << endl;
     }
@@ -48,7 +53,7 @@ public:
 int main()
 {
 
-    Car *corolla = new Car("Toyota", "Corolla", 4, 170, "Four Cillinders");
+    Car *corolla = new Car("Toyota", "Corolla", 4, 170, "V4");
 
     corolla->display();
 
