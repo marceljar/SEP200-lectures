@@ -9,7 +9,6 @@
       "args": [
         "-g",
         "templates/vector/main.cpp",
-        "templates/vector/vector.cpp",
         "-o",
         "main.exe"
       ],

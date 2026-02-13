@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 template <typename T, typename U>
 auto add(const T &a, const U &b)
 {
@@ -9,15 +11,15 @@ auto add(const T &a, const U &b)
 
 int main()
 {
-    auto ints = add(10, 20);
-    auto doubles = add(2.5, 7.5);
-    auto mixedNums = add(10, 7.5);
-    auto mixedStrings = add(std::string("Hi "), "Bob");
+    int ints = add(10, 20);
+    double doubles = add(2.5, 7.5);
+    double mixedNums = add(10, 7.5);
+    string mixedStrings = add(string("Hi "), "Bob");
 
-    std::cout << "ints = " << ints << std::endl;
-    std::cout << "doubles = " << doubles << std::endl;
-    std::cout << "mixedNums = " << mixedNums << std::endl;
-    std::cout << "mixedStrings = " << mixedStrings << std::endl;
+    cout << "ints = " << ints << endl;
+    cout << "doubles = " << doubles << endl;
+    cout << "mixedNums = " << mixedNums << endl;
+    cout << "mixedStrings = " << mixedStrings << endl;
 
     return 0;
 }

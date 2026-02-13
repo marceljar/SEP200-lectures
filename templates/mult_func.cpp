@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int doubleValue(int x)
 {
     return x + x;
@@ -11,7 +13,7 @@ double doubleValue(double x)
     return x + x;
 }
 
-std::string doubleValue(std::string s)
+string doubleValue(string s)
 {
     return s + s;
 }
@@ -20,11 +22,11 @@ int main()
 {
     int age = 7;
     double marks = 3.5;
-    std::string greeting = "Hi";
+    string greeting = "Hi";
 
-    std::cout << "int: " << doubleValue(age) << std::endl;
-    std::cout << "double: " << doubleValue(marks) << std::endl;
-    std::cout << "string: " << doubleValue(greeting) << std::endl;
+    cout << "int: " << doubleValue(age) << endl;
+    cout << "double: " << doubleValue(marks) << endl;
+    cout << "string: " << doubleValue(greeting) << endl;
 
     return 0;
 }

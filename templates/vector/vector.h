@@ -11,7 +11,7 @@ private:
     T y_;
 
 public:
-    Vector() : x_(T{}), y_(T{}) {}
+    Vector() {}
     Vector(T x, T y) : x_(x), y_(y) {}
 
     Vector operator+(const Vector &other) const
