@@ -1,10 +1,11 @@
 #include <iostream>
-#include <iterator>
 #include <forward_list>
+#include <iterator>
 
 int main()
 {
     std::forward_list<int> fl{10, 3, 7, 3, 25};
+
     std::forward_list<int>::iterator it;
 
     std::cout << "List elements using iterator: ";
@@ -36,19 +37,6 @@ int main()
 
     it = fl.begin();
     fl.insert_after(it, 222);
-
-    std::cout << "List elements using iterator: ";
-    for (it = fl.begin(); it != fl.end(); it++)
-    {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
-
-    auto pos = fl.begin();
-    if (pos != fl.end() && std::next(pos) != fl.end())
-    {
-        fl.erase_after(pos);
-    }
 
     std::cout << "List elements using iterator: ";
     for (it = fl.begin(); it != fl.end(); it++)

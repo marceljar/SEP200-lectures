@@ -9,7 +9,7 @@ int main()
     v.push_back(-5);
 
     std::cout << "v has " << v.size()
-              << " elements:\n";
+              << " elements:" << std::endl;
 
     for (int i = 0; i < v.size(); i++)
     {
