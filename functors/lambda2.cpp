@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath> // for sqrt
 
 void print(double n)
 {
