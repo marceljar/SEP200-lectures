@@ -15,8 +15,7 @@ int main()
 
     int offset = 4;
 
-    std::transform(numbers.begin(), numbers.end(),
-                   offsets.begin(),
+    std::transform(numbers.begin(), numbers.end(), offsets.begin(),
                    [offset](double n)
                    {
                        return n + offset;
