@@ -24,7 +24,18 @@ public:
         }
     }
 
-    void printCourses() const;
+    void printCourses() const
+    {
+        cout << name_ << " is taking: ";
+        for (int i = 0; i < courseCount_; i++)
+        {
+            cout << courses_[i]->code()
+                 << ": " << courses_[i]->name();
+            if (i + 1 < courseCount_)
+                cout << ", ";
+        }
+        cout << endl;
+    }
 };
 
 class Course
@@ -68,19 +79,6 @@ public:
         cout << endl;
     }
 };
-
-void Student::printCourses() const
-{
-    cout << name_ << " is taking: ";
-    for (int i = 0; i < courseCount_; i++)
-    {
-        cout << courses_[i]->code()
-             << ": " << courses_[i]->name();
-        if (i + 1 < courseCount_)
-            cout << ", ";
-    }
-    cout << endl;
-}
 
 void enroll(Student &student, Course &course)
 {

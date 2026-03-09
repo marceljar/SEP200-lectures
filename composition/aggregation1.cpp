@@ -59,9 +59,11 @@ int main()
         Player("Marquinhos", 4),
         Player("Hakimi", 2)};
 
-    Team PSG("PSG", 3, players);
+    Team *PSG = new Team("PSG", 3, players);
 
-    PSG.display();
+    PSG->display();
+
+    delete PSG;
 
     return 0;
 }
