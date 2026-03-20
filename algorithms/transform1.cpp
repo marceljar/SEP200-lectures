@@ -22,7 +22,9 @@ int main()
 {
     std::vector<double> numbers = {1.0, 2.0, 3.0, 4.0, 5.0};
     std::vector<double> squares(numbers.size());
-    std::vector<double> sqrts(numbers.size());
+    std::vector<double> sqrts;
+
+    sqrts.resize(numbers.size());
 
     std::transform(numbers.begin(), numbers.end(),
                    squares.begin(), square);

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <list>
 #include <algorithm>
 
 void print(int n)
@@ -9,9 +9,9 @@ void print(int n)
 
 int main()
 {
-    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8};
+    std::list<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8};
 
-    std::cout << "Vector: ";
+    std::cout << "List: ";
     std::for_each(numbers.begin(), numbers.end(), print);
     std::cout << std::endl;
 

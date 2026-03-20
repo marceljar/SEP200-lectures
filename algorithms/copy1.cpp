@@ -18,8 +18,8 @@ int main()
     std::vector<int> source = {1, 2, 3, 4, 5, 6, 7, 8};
     std::vector<int> copied;
 
-    std::copy(source.begin(), source.end(),
-              std::back_inserter(copied));
+    // std::copy(source.begin(), source.end(),
+    //           std::back_inserter(copied));
 
     // preallocating can be used instead of back_inserter
     // copied.resize(source.size());

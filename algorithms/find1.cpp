@@ -13,7 +13,7 @@ int main()
     std::vector<int>::iterator it1, it2;
     std::vector<int> numbers = {1, 3, 5, 7, 8, 10, 11};
 
-    it1 = std::find(numbers.begin(), numbers.end(), 11);
+    it1 = std::find(numbers.begin(), numbers.end(), 5);
 
     if (it1 != numbers.end())
     {
