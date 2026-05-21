@@ -24,6 +24,8 @@ int main()
     }
     outFile << std::endl;
 
+    std::cout << "File updated!" << std::endl;
+
     outFile.close();
 
     return 0;

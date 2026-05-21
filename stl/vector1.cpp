@@ -4,6 +4,8 @@
 int main()
 {
     std::vector<int> v{10, 3, 7, 3, 25};
+    std::string name = "MArcel";
+    int array[3] = {1, 2, 4};
 
     v.push_back(42);
     v.push_back(-5);

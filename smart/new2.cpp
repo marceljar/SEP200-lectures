@@ -3,29 +3,29 @@
 class IntArray
 {
 private:
-    int *data;
-    int size;
+    int *data_;
+    int size_;
 
 public:
     IntArray(int s)
     {
-        size = s;
-        data = new int[size];
+        size_ = s;
+        data_ = new int[size_];
 
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size_; ++i)
         {
-            data[i] = 0;
+            data_[i] = 0;
         }
     }
 
     IntArray(const IntArray &other)
     {
-        size = other.size;
-        data = new int[size];
+        size_ = other.size_;
+        data_ = new int[size_];
 
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size_; ++i)
         {
-            data[i] = other.data[i];
+            data_[i] = other.data_[i];
         }
     }
 
@@ -33,14 +33,14 @@ public:
     {
         if (this != &other)
         {
-            delete[] data;
+            delete[] data_;
 
-            size = other.size;
-            data = new int[size];
+            size_ = other.size_;
+            data_ = new int[size_];
 
-            for (int i = 0; i < size; ++i)
+            for (int i = 0; i < size_; ++i)
             {
-                data[i] = other.data[i];
+                data_[i] = other.data_[i];
             }
         }
 
@@ -49,23 +49,23 @@ public:
 
     ~IntArray()
     {
-        delete[] data;
+        delete[] data_;
     }
 
     void setValue(int index, int value)
     {
-        if (index >= 0 && index < size)
+        if (index >= 0 && index < size_)
         {
-            data[index] = value;
+            data_[index] = value;
         }
     }
 
     void print() const
     {
         std::cout << "[ ";
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size_; ++i)
         {
-            std::cout << data[i] << " ";
+            std::cout << data_[i] << " ";
         }
         std::cout << "]" << std::endl;
     }

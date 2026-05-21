@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
 
-int main() {
+int main()
+{
 
-    std::string firstName = "Marcel";
+    std::string firstName;
     std::string lastName("Jar");
+
+    firstName = "Marcel";
 
     std::string fullName = firstName + " " + lastName;
 
@@ -19,7 +22,8 @@ int main() {
     fullName.append(" (PhD)");
     std::cout << "After append: " << fullName << std::endl;
 
-    if (firstName == "Marcel") {
+    if (firstName == "Marcel")
+    {
         std::cout << "First name matches!" << std::endl;
     }
 
@@ -27,7 +31,8 @@ int main() {
     std::cout << "Substring: " << title << std::endl;
 
     size_t pos = fullName.find("Jar");
-    if (pos != std::string::npos) {
+    if (pos != std::string::npos)
+    {
         std::cout << "'Jar' found at pos " << pos << std::endl;
     }
 

@@ -3,6 +3,7 @@
 #include "math2.h"
 
 // defines PI as a const
+
 const double math::PI = 3.1416;
 
 int math::add(int a, int b)

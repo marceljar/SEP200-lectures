@@ -25,12 +25,22 @@ public:
         return Vector(x_ * scalar, y_ * scalar);
     }
 
-    void print() const
-    {
-        std::cout << "(" << x_ << ", "
-                  << y_ << ")" << std::endl;
-    }
+    friend std::ostream &operator<<(std::ostream &os,
+                                    const Vector &v);
+
+    friend Vector operator*(double scalar, const Vector &v);
 };
+
+Vector operator*(double scalar, const Vector &v)
+{
+    return Vector(v.x_ * scalar, v.y_ * scalar);
+}
+
+std::ostream &operator<<(std::ostream &os, const Vector &v)
+{
+    os << "(" << v.x_ << ", " << v.y_ << ")";
+    return os;
+}
 
 int main()
 {
@@ -41,12 +51,12 @@ int main()
     Vector d = a + a - b;
     Vector e = a * 2.0;
 
-    std::cout << "c = ";
-    c.print();
-    std::cout << "d = ";
-    d.print();
-    std::cout << "e = ";
-    e.print();
+    Vector f = 2.0 * b;
+
+    std::cout << "c = " << c << std::endl;
+    std::cout << "d = " << d << std::endl;
+    std::cout << "e = " << e << std::endl;
+    std::cout << "f = " << f << std::endl;
 
     return 0;
 }

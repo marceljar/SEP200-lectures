@@ -1,11 +1,12 @@
 #include "student.h"
 
-int main() {
-    
+int main()
+{
+
     Student student;
 
     student.edit();
-    student.display();    
-    
+    student.display();
+
     return 0;
 }

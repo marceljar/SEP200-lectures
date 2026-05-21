@@ -7,10 +7,10 @@ public:
 
     Counter() : count(0) {}
 
-    int operator()()
+    void operator()()
     {
         count++;
-        std::cout << "Called the counter object"
+        std::cout << "Called the counter object "
                   << count << " times." << std::endl;
     }
 };

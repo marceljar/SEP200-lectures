@@ -14,7 +14,13 @@
       "externalConsole": true,
       "MIMode": "gdb",                        
       "miDebuggerPath": "gdb",                
-      "preLaunchTask": "build-cpp"
+      "preLaunchTask": "build-cpp",
+      "setupCommands": [
+       {
+         "description": "Enable pretty-printing",
+         "text": "-enable-pretty-printing",
+         "ignoreFailures": true
+       }]
     },
     {
       "name": "Debug active C++ file",
@@ -25,10 +31,16 @@
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": true,
+      "externalConsole": false,
       "MIMode": "gdb",          // or "lldb" on macOS
       "miDebuggerPath": "gdb",  // adjust path if needed
-      "preLaunchTask": "build active file"
+      "preLaunchTask": "build active file",
+      "setupCommands": [
+       {
+         "description": "Enable pretty-printing",
+         "text": "-enable-pretty-printing",
+         "ignoreFailures": true
+       }]
     }
   ]
 }

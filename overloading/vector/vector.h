@@ -16,7 +16,8 @@ public:
     Vector operator-(const Vector &other) const;
     Vector operator*(double scalar) const;
 
-    friend std::ostream &operator<<(std::ostream &, const Vector &);
+    friend std::ostream &operator<<(std::ostream &,
+                                    const Vector &);
     friend Vector operator*(float, const Vector &);
 };
 

@@ -12,9 +12,9 @@ int safe_division(int dividend, int quotient)
 
 int main()
 {
-    int dividend = 10, quotient = 0;
+    int dividend = 10, quotient = 1;
 
-    // std::cout << "Result: " << dividend/quotient
+    // std::cout << "Result: " << dividend / quotient
     //           << std::endl;
 
     try
