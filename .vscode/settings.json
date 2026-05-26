@@ -1,5 +1,9 @@
 {
-    "files.associations": {
+  "terminal.integrated.automationProfile.linux": {
+    "path": "/bin/bash"
+  },
+  "debug.allowBreakpointsEverywhere": true,
+  "files.associations": {
         "atomic": "cpp",
         "bit": "cpp",
         "cctype": "cpp",

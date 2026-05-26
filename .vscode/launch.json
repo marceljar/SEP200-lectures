@@ -1,46 +1,39 @@
-// .vscode/launch.json
 {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Multiple Files",
+      "name": "Debug Active C++ File",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/main.exe",   
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${fileDirname}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "build active file"
+    },
+    {
+      "name": "Debug Multiple C++ Files",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/main",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": true,
-      "MIMode": "gdb",                        
-      "miDebuggerPath": "gdb",                
-      "preLaunchTask": "build-cpp",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "build multiple files",
       "setupCommands": [
-       {
-         "description": "Enable pretty-printing",
-         "text": "-enable-pretty-printing",
-         "ignoreFailures": true
-       }]
-    },
-    {
-      "name": "Debug active C++ file",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",          // or "lldb" on macOS
-      "miDebuggerPath": "gdb",  // adjust path if needed
-      "preLaunchTask": "build active file",
-      "setupCommands": [
-       {
-         "description": "Enable pretty-printing",
-         "text": "-enable-pretty-printing",
-         "ignoreFailures": true
-       }]
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }

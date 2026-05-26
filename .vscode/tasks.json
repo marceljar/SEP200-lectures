@@ -1,25 +1,7 @@
-// .vscode/tasks.json
 {
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build-cpp",
-      "type": "shell",
-      "command": "g++",
-      "args": [
-        "-g",
-        "introduction/main.cpp",
-        "introduction/math.cpp",
-        "-o",
-        "main.exe"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": ["$gcc"]
-    },
-     {
       "label": "build active file",
       "type": "shell",
       "command": "g++",
@@ -27,7 +9,21 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.exe"
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "build multiple files",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "introduction/main.cpp",
+        "introduction/math.cpp",
+        "-o",
+        "${workspaceFolder}/main"
       ],
       "group": {
         "kind": "build",
@@ -36,9 +32,15 @@
       "problemMatcher": ["$gcc"]
     },
     {
-      "label": "cleanup-executable",
+      "label": "cleanup executable",
       "type": "shell",
-      "command": "del /Q \"${fileDirname}/${fileBasenameNoExtension}.exe"
+      "command": "rm",
+      "args": [
+        "-f",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "${workspaceFolder}/main"
+      ],
+      "problemMatcher": []
     }
   ]
 }
