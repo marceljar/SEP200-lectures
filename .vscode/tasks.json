@@ -1,6 +1,24 @@
+// .vscode/tasks.json
 {
   "version": "2.0.0",
   "tasks": [
+    {
+      "label": "build multiple files",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "W03/solution/main.cpp",
+        "W03/solution/complex.cpp",
+        "-o",
+        "${workspaceFolder}/main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
     {
       "label": "build active file",
       "type": "shell",
@@ -15,16 +33,18 @@
       "problemMatcher": ["$gcc"]
     },
     {
-      "label": "build multiple files",
+      "label": "WSL build active file",
       "type": "shell",
-      "command": "g++",
+      "command": "/usr/bin/g++",
       "args": [
         "-g",
-        "introduction/main.cpp",
-        "introduction/math.cpp",
+        "${file}",
         "-o",
-        "${workspaceFolder}/main"
+        "${fileDirname}/${fileBasenameNoExtension}"
       ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
@@ -32,15 +52,20 @@
       "problemMatcher": ["$gcc"]
     },
     {
-      "label": "cleanup executable",
+      "label": "WSL build multiple files",
       "type": "shell",
-      "command": "rm",
+      "command": "/usr/bin/g++",
       "args": [
-        "-f",
-        "${fileDirname}/${fileBasenameNoExtension}",
-        "${workspaceFolder}/main"
+        "-g",
+        "*.cpp",
+        "-o",
+        "main"
       ],
-      "problemMatcher": []
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
     }
   ]
 }
