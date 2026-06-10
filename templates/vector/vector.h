@@ -14,17 +14,21 @@ public:
     Vector() {}
     Vector(T x, T y) : x_(x), y_(y) {}
 
-    Vector operator+(const Vector &other) const
-    {
-        return Vector(x_ + other.x_, y_ + other.y_);
-    }
+    Vector operator+(const Vector &other) const;
 
-    void print() const
-    {
-        std::cout << "(" << x_ << ", " << y_ << ")" << std::endl;
-    }
+    void print() const;
 };
 
-#include "vector.cpp"
+template <typename T>
+Vector<T> Vector<T>::operator+(const Vector<T> &other) const
+{
+    return Vector(x_ + other.x_, y_ + other.y_);
+}
+
+template <typename T>
+void Vector<T>::print() const
+{
+    std::cout << "(" << x_ << ", " << y_ << ")" << std::endl;
+}
 
 #endif

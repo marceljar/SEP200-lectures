@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-template <typename T, typename U>
-void printPair(T first, U second)
+template <typename T1, typename T2>
+void printPair(T1 first, T2 second)
 {
     std::cout << "First: " << first
               << ", Second: " << second << std::endl;
